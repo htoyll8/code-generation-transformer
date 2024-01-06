@@ -65,9 +65,6 @@ def preprocess_data(input_file, output_file, min_length, max_length, token_lengt
     """
     with open(input_file, 'r') as f_in, open(output_file, 'w') as f_out:
         for line in f_in:
-            # Remove leading and trailing whitespace
-            line = line.strip()
-
             # Filter based on minimum and maximum character lengths
             if len(line) < min_length or len(line) > max_length:
                 continue
