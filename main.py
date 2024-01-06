@@ -119,12 +119,14 @@ def train_tokenizer(dataset, vocab_size, tokenizer_file):
 def main():
     access_token = get_access_token()
 
-    if access_token:
-        github_instance = Github(access_token)
-        query = "language:python"
-        search_repositories(github_instance, query)
-    else:
-        print("Unable to search repositories.")
+    # if access_token:
+    #     github_instance = Github(access_token)
+    #     query = "language:python"
+    #     search_repositories(github_instance, query)
+    # else:
+    #     print("Unable to search repositories.")
+
+    process_repo_files('repositories')
 
 if __name__ == "__main__":
     main()
