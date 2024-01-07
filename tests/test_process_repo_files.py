@@ -43,9 +43,5 @@ class PreprocessRepoFilesTest(unittest.TestCase):
 
     def test_preprocess_repo_files(self):
         process_repo_files(self.directory_path)
-
-        python_file_path = os.path.join(self.directory_path, self.python_file)
         self.assertTrue(os.path.exists(self.python_file_path))
-
-        non_python_file_path = os.path.join(self.directory_path, self.non_python_file)
         self.assertFalse(os.path.exists(self.non_python_file_path))
